@@ -102,4 +102,7 @@ theme: one-paper
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/CNH-asia/CNH-asia.github.io.git
+  branch: dev
+  token: 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
