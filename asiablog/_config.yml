@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://cnh-asia.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -103,6 +103,6 @@ theme: one-paper
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/CNH-asia/CNH-asia.github.io.git
+  repo: https://github.com/CNH-asia/CNH-asia.github.io
   branch: dev
-  token: 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
+  token: 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
