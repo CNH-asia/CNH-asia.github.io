@@ -78,15 +78,30 @@
 <h3 id="markdown语法简单说明"><a href="#markdown语法简单说明" class="headerlink" title="markdown语法简单说明"></a>markdown语法简单说明</h3><p>markdown是一种标记语法，能快速生成html网页，网上有很多教程，这里就不再赘述。贴一篇<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/191d1e21f7ed">文章</a>供参考。</p>
 <h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>hexo支持修改<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主题</a>，以本站使用的主题<a target="_blank" rel="noopener" href="https://github.com/zheli-design/hexo-theme-one-paper">one-paper</a>为例，下载zip包后解压到themes目录下，更改 _config.yml 配置：theme: one-paper，执行<code>hexo s</code>预览效果。<br><img src="/../images/how_to_build_your_blog/theme.png" alt="主题"></p>
 <h3 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h3><p>1.在myblog目录下执行命令<code>npm i hexo-deployer-git --save</code>，修改_config.yml配置：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy</span>:</span><br><span class="line">  <span class="attr">type</span>: git</span><br><span class="line">  <span class="attr">repo</span>: <span class="attr">https</span>:<span class="comment">//github.com/CNH-asia/CNH-asia.github.io.git //项目地址</span></span><br><span class="line">  <span class="attr">branch</span>: dev <span class="comment">//代码分支，默认是master</span></span><br><span class="line">  <span class="attr">token</span>: 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</span><br></pre></td></tr></table></figure>
-<p>token的获取方法：访问<a target="_blank" rel="noopener" href="https://github.com/settings/tokens">设置</a>，<br><img src="/../images/how_to_build_your_blog/generate_token.png" alt="主题"><br>执行<code>hexo g -d</code>，完成后访问博客主页，最新的内容已经成功发布了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">url</span>: <span class="attr">https</span>:<span class="comment">//cnh-asia.github.io //博客地址</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/CNH-asia/CNH-asia.github.io //项目地址</span><br><span class="line">  branch: master //代码分支，默认是master</span><br><span class="line">  token: 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</span><br></pre></td></tr></table></figure>
+<p>token的获取方法：访问<a target="_blank" rel="noopener" href="https://github.com/settings/tokens">设置</a>，<br><img src="/../images/how_to_build_your_blog/generate_token.png" alt="主题"><br>执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean //清除上次生成的文件</span><br><span class="line">hexo g //生成文件</span><br><span class="line">hexo d //部署到github</span><br></pre></td></tr></table></figure>
+<p>如果成功连接会弹出一个git窗口，可以输入token进行登录，成功的信息：<br><img src="/../images/how_to_build_your_blog/success.png" alt="成功的打印信息"><br>完成后访问博客主页，最新的内容已经成功发布了。<br>如果提示timeout则表示连接超时，需要翻墙。</p>
+<blockquote>
+<p>注：建议把博客发布到master分支，新建一个分支用来保存源码。</p>
+</blockquote>
 
     </div>
 
 </div>
-                <div class="footer">
+                <!--
+ * @Author: chenliujiayu chenliujiayu@supos.com
+ * @Date: 2022-06-08 16:01:15
+ * @LastEditors: chenliujiayu chenliujiayu@supos.com
+ * @LastEditTime: 2022-06-09 09:49:30
+ * @FilePath: \CNH-asia.github.io\asiablog\themes\one-paper\layout\_partial\footer.ejs
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<div class="footer">
     <span>Copyright © 2022 无想之地</span>
-    <span>Theme Designed By <a target="_blank" href="https://zheli.design/one-paper">這Li</a></span>
+    <!-- <span>Theme Designed By <a target="_blank" href="https://zheli.design/one-paper">這Li</a></span> -->
 </div>
 
 
