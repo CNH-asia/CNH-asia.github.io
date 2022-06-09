@@ -118,15 +118,31 @@ hexo支持修改[主题](https://hexo.io/themes/)，以本站使用的主题[one
 
 1.在myblog目录下执行命令`npm i hexo-deployer-git --save`，修改_config.yml配置：
 ```js
+url: https://cnh-asia.github.io //博客地址
+```
+
+```
 deploy:
   type: git
-  repo: https://github.com/CNH-asia/CNH-asia.github.io.git //项目地址
-  branch: dev //代码分支，默认是master
+  repo: https://github.com/CNH-asia/CNH-asia.github.io //项目地址
+  branch: master //代码分支，默认是master
   token: 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
 ```
 token的获取方法：访问[设置](https://github.com/settings/tokens)，
 ![主题](../images/how_to_build_your_blog/generate_token.png)
-执行`hexo g -d`，完成后访问博客主页，最新的内容已经成功发布了。
+执行
+
+```bash
+hexo clean //清除上次生成的文件
+hexo g //生成文件
+hexo d //部署到github
+```
+如果成功连接会弹出一个git窗口，可以输入token进行登录，成功的信息：
+![成功的打印信息](../images/how_to_build_your_blog/success.png)
+完成后访问博客主页，最新的内容已经成功发布了。
+如果提示timeout则表示连接超时，需要翻墙。
+> 注：建议把博客发布到master分支，新建一个分支用来保存源码。
+
 
 
 

@@ -104,5 +104,5 @@ theme: one-paper
 deploy:
   type: git
   repo: https://github.com/CNH-asia/CNH-asia.github.io
-  branch: dev
+  branch: master
   token: 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
